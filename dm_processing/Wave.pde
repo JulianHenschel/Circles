@@ -12,14 +12,10 @@ class Wave {
     this.id = wl.size();
     
   }
-  
-  void update() {
-    
-    this.value = this.wave.update();
-    
-  }
 
   void draw() {
+    
+    this.value = this.wave.update();
     
     stroke(255);
     strokeWeight(1);

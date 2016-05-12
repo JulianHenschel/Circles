@@ -1,8 +1,7 @@
+import java.util.*;
 import processing.serial.*;
-import processing.opengl.*;
 import toxi.math.waves.*;
 import controlP5.*;
-import java.util.*;
 
 ControlP5 cp5;
 Serial serial;
@@ -22,7 +21,7 @@ void setup() {
   // init wave
   wl = new ArrayList<Wave>();
   
-  // add elements
+  // add wave elements
   wl.add(new Wave(new FMSineWave(0, .02, mult_factor, 0)));
   wl.add(new Wave(new FMSawtoothWave(0, .02, mult_factor, 0)));
   wl.add(new Wave(new FMSquareWave(0, .02, mult_factor, 0)));
@@ -57,9 +56,7 @@ void draw() {
         sendSerial(0);
       }
     }
-     
   }
-  
 }
 
 void serialList(int n) {

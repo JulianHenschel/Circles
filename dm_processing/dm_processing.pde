@@ -7,7 +7,6 @@ import java.util.*;
 ControlP5 cp5;
 Serial serial;
 
-
 ArrayList<Wave> wl;
 boolean active = false, initialized = false;
 int mult_factor = 10;

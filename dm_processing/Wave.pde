@@ -26,12 +26,10 @@ class Wave {
     noFill();
     
     if(this.status) {
-
       this.wave.push();
               
         pushMatrix();
         translate(width/2,height/2);
-        
           beginShape();
 
           for(int x = -width/2; x < width/2; x += width/100) {
@@ -39,22 +37,14 @@ class Wave {
           }
           
           endShape();
-          
         popMatrix();
-      
       this.wave.pop();  
-      
-      noStroke();
-      fill(255);
-      text("motorvalue: "+this.getConvertedValue(), 20, 30);
-    
+
     }
   }
   
   int getConvertedValue() {
-    
     return parseInt(map(this.value, -mult_factor, mult_factor, 0, 100));
-    
   }
   
 }

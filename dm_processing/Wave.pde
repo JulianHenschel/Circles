@@ -1,21 +1,22 @@
 class Wave {
   
   boolean status = false;
-  int id;
-  String name;
-  int amp = 20;
+  int id, amp = 20;
   float value;
   
   AbstractWave wave;
   
   Wave(AbstractWave w) {
-    
+
     this.wave = w;
     this.id = wl.size();
+    
   }
   
   void update() {
+    
     this.value = this.wave.update();
+    
   }
 
   void draw() {
@@ -51,7 +52,9 @@ class Wave {
   }
   
   int getConvertedValue() {
+    
     return parseInt(map(this.value, -mult_factor, mult_factor, 0, 100));
+    
   }
   
 }

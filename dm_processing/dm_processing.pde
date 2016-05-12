@@ -12,9 +12,6 @@ ArrayList<Wave> wl;
 boolean active = false, initialized = false;
 int mult_factor = 10;
 
-Slider2D s;
-CheckBox checkbox;
-
 void setup() {
   
   size(1024,440, P3D);
